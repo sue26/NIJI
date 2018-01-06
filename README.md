@@ -1,10 +1,10 @@
-#Niji Sushi Official Website
+# Niji Sushi Official Website
 
-##Intro
+## Intro
 This is an official website for Niji Sushi.  
 The hosting server is with google engine, and the framework used is Flask.  
 
-##How To Run 
+## How To Run 
 1. Activate virtual environment (virtenv)  
   `. env/bin/activate`  
   *Note: env is an instance of virtenv for Niji Project*  
