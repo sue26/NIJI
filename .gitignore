@@ -1,0 +1,14 @@
+#ignore env
+env/
+
+#ignore compiled css files
+static/css/
+
+# .pyc files
+*.pyc
+
+#.DS_Store
+.DS_Store
+
+#libraries
+lib/
