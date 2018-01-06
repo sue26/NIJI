@@ -1,4 +1,4 @@
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -8,18 +8,18 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Niji Sushi</a>
+      <img src="{{url_for('static', filename='logo.jpg')}}">
+      <p class="navbar-text navbar-right">Place your order now: (416)111-2222</p>
     </div>
 
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="myNavCollapse">
+    <div class="collapse navbar-collapse navbar-right" id="myNavCollapse">
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
         <li><a href="#">Menu</a></li>
         <li><a href="#">Contact Us</a></li>
       </ul> 
-      <p class="navbar-text navbar-right">Place your order now: (416)111-2222</p>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
