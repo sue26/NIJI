@@ -13,3 +13,8 @@ The hosting server is with google engine, and the framework used is Flask.
   `dev_appserver.py app.yaml`  
   then connect to localhost:8080
 
+3. Install dependencies
+  `pip install -t lib -r requirements.txt`
+
+  
+

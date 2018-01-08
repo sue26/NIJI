@@ -1,12 +1,161 @@
-.pagetitle {
-    color: #800080;
+body {
+	background-color: #f7f7f7;
 }
 
+pre {
+	border: none;
+	background-color: transparent;
+}
 
+/* Navbar CSS */
+.navbar {
+	background-color: white;
+	font-family: "Lucida Console", Monaco, monospace;
+}
 
+.navbar .container{
+	margin:0 auto;
+	height: 14vh;
+}
 
+.navbar-brand {
+	font-size: 200%;
+}
 
+.navbar-header, .navbar-collapse {
+	padding-top: 3vh; /* Manually aligned center vertically */
+}
+
+.navbar-toggle {
+	background-color: black;
+}
 
 .navbar-text {
-	margin-right: 10px; !important
+	margin: 0;
+	padding: 0;
+	margin-left: 10px;
+}
+
+.navbar-nav {
+	background-color: white;
+}
+
+#myMenu {
+	color: black;
+}
+
+#myMenu:hover, #myMenu.active {
+	color:red;
+}
+
+/* home.html CSS */
+
+#myCarousel {
+	margin-top: 13vh;
+}
+
+.carousel-inner .item {
+	width: 100vw;
+	height: 50vw;
+}
+
+.carousel-inner .item img {
+	width: 100%;
+	height: auto;
+	opacity: 0.8;
+}
+
+.mycarousel-caption * {
+	z-index: 999;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 10px;
+	font-family: 'Glegoo', serif;
+	text-align: right;
+}
+
+.myOpeningHours {
+	width: 100%;
+	padding-top: 10vw;
+	padding-bottom: 10vw;
+	overflow: auto;
+}
+
+.myOpeningHours div {
+	text-align: center;
+	padding-bottom: 30px;
+}
+
+.myBorderRight {
+	border-right: 5px solid #cccccc;
+}
+
+#myGoogleMap {
+	width: 100%;
+	height: 400px;
+	float: left; 
+	padding: 10px;
+}
+
+.myMap {
+	padding: 5vw;
+}
+
+.myMap div {
+	text-align: right;
+}
+
+.myMap div * {
+	font-family: 'Glegoo', serif;
+	font-size: 100%;
+}
+
+@media screen and (max-width : 700px) {
+	.mycarousel-caption h1 {
+		font-size: 2em;
+		font-weight: 900;
+	}
+	.mycarousel-caption {
+		position: absolute;
+		left: 0px;
+		bottom: 40px;
+	}
+	.mycarousel-caption * {
+		padding-left: 50px;
+	}
+	.myOpeningHours div *, .myMap div * {
+		font-family: 'Glegoo', serif;
+		font-size: 1.1em;
+	}
+}
+
+@media screen and (min-width : 700px) {
+	.mycarousel-caption h1 {
+		font-size: 4em;
+		font-weight: 900;
+	}
+	.mycarousel-caption {
+		position: absolute;
+		left: 0px;
+		bottom: 100px;
+	}
+	.mycarousel-caption * {
+		padding-left: 100px;
+	}
+	.myOpeningHours div *, .myMap div * {
+		font-family: 'Glegoo', serif;
+		font-size: 1.5em;
+	}
+}
+
+#myFooter {
+	width: 100vw;
+	height: 50px;
+	background-color: #1c1304;
+	color: white;
+	font-family: "Lucida Console", Monaco, monospace;
+	text-align: center;
+	font-weight: 300;
+	padding:15px;
+	font-size: 0.7em;
 }

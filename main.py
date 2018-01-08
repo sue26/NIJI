@@ -1,7 +1,13 @@
 from flask import Flask, render_template, flash, redirect, url_for, session, logging, request
+from data import Menu
+# from sassutils.wsgi import SassMiddleware
 
 app = Flask(__name__)
 app.debug = True
+# app.wsgi_app = SassMiddleware(app.wsgi_app, {
+#     'myapp': ('static/sass', 'static/css', '/static/css')
+# })
+Menu = Menu();
 
 @app.route('/form')
 def form():
@@ -25,3 +31,6 @@ def submitted_form():
 def home():
     return render_template('home.html')
 
+@app.route('/menu')
+def menu():
+    return render_template('menu.html', menu=Menu)
