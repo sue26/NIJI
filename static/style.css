@@ -148,6 +148,51 @@ pre {
 	}
 }
 
+.myMenu {
+	margin-top: 13vh;
+	font-family: 'Glegoo', serif;
+}
+
+.myMenu .nav {
+	padding: 50px 20px 0px 20px;
+}
+
+.myMenuNav li {
+	width: 23%;
+	margin: 2px;
+	margin-bottom: 10px;
+	border: 2px solid white;
+}
+
+.myMenuNav li:hover, .myMenuNav li.active {
+    border-bottom-color: red ! important;
+}
+
+.myMenuNav>li.active>a, .myMenuNav>li.active>a:focus, .myMenuNav>li.active>a:hover, .myMenuNav>li>a:hover {
+    background-color: #FFFFFF ! important;
+    color: black ! important;
+}
+
+.myMenuNav li a {
+	text-align: center;
+}
+
+.myTabContent {
+	margin: 10vw;
+}
+
+.myTabContent h1 {
+	font-size: 3em;
+	font-family: 'Glegoo', serif;
+}
+
+.myTabContent td {
+	padding: 13px;
+}
+
+.myTabContent tr:nth-child(odd) {
+    background: #f7f7f7;
+}
 #myFooter {
 	width: 100vw;
 	height: 50px;

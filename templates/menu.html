@@ -1,8 +1,73 @@
 {% extends 'layout.html' %}
+{% set active_page = "menu" %}
 
 {% block body %}
- 
-{% for item in menu %}
-<h1>{{item.name}}</h1>
-{% endfor %}
+<div class="myMenu container" style="background-color: white;">
+	
+	<ul class="nav nav-pills myMenuNav">
+	 	<li class="active"><a data-toggle="pill" href="#lunc">Lunch</a></li>
+		<li><a data-toggle="pill" href="#appe">Appetizers</a></li>
+	 	<li><a data-toggle="pill" href="#soup">Soups & Salad</a></li>
+	 	<li><a data-toggle="pill" href="#maki">Maki & Hand Roll</a></li><br />
+	 	<li><a data-toggle="pill" href="#alac">&Agrave; la Carte</a></li>
+	 	<li><a data-toggle="pill" href="#main">Main Dishes</a></li>
+	 	<li><a data-toggle="pill" href="#nood">Noodle Soup</a></li>
+	 	<li><a data-toggle="pill" href="#bent">Combination Bento</a></li>
+	</ul>
+	
+	<div class="tab-content myTabContent">
+		<div id="lunc" class="tab-pane fade in active">
+  			<h1>LUNCH</h1>
+  			<p style="color:red">Mon-Fri <span class="glyphicon glyphicon-option-horizontal"></span>  11:30am to 3:00pm</p>
+  			<table>
+  				{% for item in lunch %}
+				<tr>
+					<td>{{item.id}}</td>
+					<td style="font-size:1.2em; font-weight: bold;">{{item.name}}</td>
+					<td>{{item.description}}</td>
+					<td class="text-right">{{item.price}}</td>
+				</tr>
+				{% endfor %}
+  			</table>
+		</div>
+		<div id="appe" class="tab-pane fade">
+  			<h1>APPETIZERS</h1>
+  			<table>
+  				{% for item in appetizers %}
+				<tr>
+					<td>{{item.id}}</td>
+					<td style="font-size:1.2em; font-weight: bold;">{{item.name}}</td>
+					<td>{{item.description}}</td>
+					<td class="text-right">{{item.price}}</td>
+				</tr>
+				{% endfor %}
+  			</table>
+		</div>
+		<div id="soup" class="tab-pane fade">
+  			<h3>SOUPS & SALAD</h3>
+  			<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+		</div>
+		<div id="maki" class="tab-pane fade">
+  			<h3>MAKI & HAND ROLL</h3>
+  			<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+		</div>
+		<div id="alac" class="tab-pane fade">
+  			<h3>&Agrave; LA CARTE</h3>
+  			<p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+		</div>
+		<div id="main" class="tab-pane fade">
+  			<h3>MAIN DISHES</h3>
+  			<p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+		</div>
+		<div id="nood" class="tab-pane fade">
+  			<h3>NOODLE SOUP</h3>
+  			<p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+		</div>
+		<div id="bent" class="tab-pane fade">
+  			<h3>COMBINATION BENTO</h3>
+  			<p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+		</div>
+  	</div>
+</div>
+
 {% endblock %}
