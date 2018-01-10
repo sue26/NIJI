@@ -9,8 +9,9 @@ pre {
 
 /* Navbar CSS */
 .navbar {
-	background-color: white;
+	background-color: rgba(200, 200, 200, 0.5);
 	font-family: "Lucida Console", Monaco, monospace;
+	border: none;
 }
 
 .navbar .container{
@@ -34,10 +35,11 @@ pre {
 	margin: 0;
 	padding: 0;
 	margin-left: 10px;
+	color: black !important;
 }
 
 .navbar-nav {
-	background-color: white;
+	background-color: transparent;
 }
 
 #myMenu {
@@ -51,12 +53,13 @@ pre {
 /* home.html CSS */
 
 #myCarousel {
-	margin-top: 13vh;
+	/*margin-top: 13vh*/;
 }
 
 .carousel-inner .item {
 	width: 100vw;
-	height: 50vw;
+	/*height: 50vw;*/
+	height: 57vw;
 }
 
 .carousel-inner .item img {
@@ -72,6 +75,11 @@ pre {
 	padding: 10px;
 	font-family: 'Glegoo', serif;
 	text-align: right;
+}
+
+.nijiCarousel h1, .nijiCarousel p {
+	background-color: transparent;
+	font-size: 100%;
 }
 
 .myOpeningHours {
@@ -127,6 +135,21 @@ pre {
 		font-family: 'Glegoo', serif;
 		font-size: 1.1em;
 	}
+	.myMenuNav li a {
+		text-align: center;
+	  	-webkit-hyphens: auto;
+	 	-ms-hyphens: auto;
+	 	hyphens: auto;
+	 	font-size:70%;
+	}
+	.myTabContent {
+		font-size: 60%;
+	}
+	.myTabContent img {
+		width: 22vw;
+		height: auto;
+		margin: 5px;
+	}
 }
 
 @media screen and (min-width : 700px) {
@@ -146,6 +169,15 @@ pre {
 		font-family: 'Glegoo', serif;
 		font-size: 1.5em;
 	}
+	.myMenuNav li a {
+		text-align: center;
+		font-size: 100%;
+	}
+	.myTabContent img {
+		width: 80%;
+		height: auto;
+		margin: 5px;
+	}
 }
 
 .myMenu {
@@ -154,7 +186,9 @@ pre {
 }
 
 .myMenu .nav {
-	padding: 50px 20px 0px 20px;
+	padding: 2vw 1vw 0px 2vw;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .myMenuNav li {
@@ -173,12 +207,8 @@ pre {
     color: black ! important;
 }
 
-.myMenuNav li a {
-	text-align: center;
-}
-
 .myTabContent {
-	margin: 10vw;
+	margin: 2vw;
 }
 
 .myTabContent h1 {
@@ -186,13 +216,34 @@ pre {
 	font-family: 'Glegoo', serif;
 }
 
-.myTabContent td {
+.myTabContent table {
+	width: 100%;
+}
+
+.myTabContent td, .myTabContent th {
 	padding: 13px;
 }
 
 .myTabContent tr:nth-child(odd) {
     background: #f7f7f7;
 }
+
+#vegOptionScrollDown {
+	display: inline-block;
+	float: right;
+	background-color: #bcdbc4;
+	border: 1px solid #bcdbc4;
+	border-radius: 5px;
+	padding: 10px;
+	margin: 10px;
+}
+
+#vegOptionScrollDown:hover {
+	text-decoration: none;
+	background-color: green;
+	color: white;
+}
+
 #myFooter {
 	width: 100vw;
 	height: 50px;

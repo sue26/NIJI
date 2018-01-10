@@ -13,11 +13,22 @@
     <li data-target="#myCarousel" data-slide-to="3"></li>
     <li data-target="#myCarousel" data-slide-to="4"></li>
     <li data-target="#myCarousel" data-slide-to="5"></li>
+    <li data-target="#myCarousel" data-slide-to="6"></li>
+
   </ol>
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
-    <div class="item active">
+    <div class="item active nijiCarousel">
+      <img src="{{url_for('static', filename='carousel/wallpaper.jpg')}}" alt="niji" style="opacity:1;">
+      <div class="mycarousel-caption">
+        <img src="{{url_for('static', filename='carousel/niji_jap.png')}}" 
+          style="width:18vw; height: 12vw; margin-left: 37vw; background-color: transparent;">
+        <img src="{{url_for('static', filename='carousel/niji_txt.png')}}" 
+          style="width:40vw; height: 10vw; margin-left: 27vw; margin-bottom: 8vw; background-color: transparent;">
+      </div>
+    </div>
+    <div class="item">
       <img src="{{url_for('static', filename='carousel/platter.jpeg')}}" alt="platter">
       <div class="mycarousel-caption">
         <h1>Sushi Party Platter</h1>
@@ -77,7 +88,7 @@
   </a>
 </div>
 
-<div class="myOpeningHours">
+<div class="myOpeningHours container">
 	<div class="row">
 		<h1 style="font-size: 2em;"><b>Opening Hours</b></h1>
 	</div>

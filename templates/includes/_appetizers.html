@@ -1,0 +1,29 @@
+<div id="appe" class="tab-pane fade">
+	<div class="row">
+		<h1>APPETIZERS</h1>
+	</div>
+	<div class="row">
+		<div class="col-sm-8">
+  			<table>
+  				{% for item in appetizers %}
+				<tr>
+					<td>{{item.id}}</td>
+					<td style="font-size:1.2em; font-weight: bold;">{{item.name}}</td>
+					<td>{{item.description}}</td>
+					<td class="text-right">{{item.price}}</td>
+				</tr>
+				{% endfor %}
+  			</table>
+		</div>
+		<div class="col-sm-4">
+			<img src="{{url_for('static', filename='menu/appe1.jpg')}}" alt="appe1">
+			<img src="{{url_for('static', filename='menu/appe2.jpg')}}" alt="appe2">
+			<img src="{{url_for('static', filename='menu/appe3.jpg')}}" alt="appe3">
+			<img src="{{url_for('static', filename='menu/appe4.jpg')}}" alt="appe4">
+			<img src="{{url_for('static', filename='menu/appe5.jpg')}}" alt="appe5">
+			<img src="{{url_for('static', filename='menu/appe6.jpg')}}" alt="appe6">	
+			<img src="{{url_for('static', filename='menu/appe7.jpg')}}" alt="appe7">
+			<img src="{{url_for('static', filename='menu/appe8.jpg')}}" alt="appe8">
+		</div>
+	</div>
+</div>

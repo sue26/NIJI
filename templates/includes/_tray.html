@@ -1,0 +1,41 @@
+<div id="tray" class="tab-pane fade in active">
+	<div class="row">
+		<h1>COMBINATION TRAY</h1>
+		<p style="color:red">** Pick Up Only **</p>
+	</div>
+	<div class="row" style="margin-bottom: 50px">
+		<img src="{{url_for('static', filename='menu/tray1.jpg')}}" style="width:250px; height:200px;">
+		<img src="{{url_for('static', filename='menu/tray2.jpg')}}" style="width:250px; height:200px;">
+		<img src="{{url_for('static', filename='menu/tray3.jpg')}}" style="width:250px; height:200px;">
+		<img src="{{url_for('static', filename='menu/tray4.jpg')}}" style="width:250px; height:200px;">
+	</div>
+	<div class="row">
+		<table>
+			{% for item in tray %}
+			<tr>
+				<td>{{ item.id }}</td>
+				<td style="width: 30%; font-size: 1.2em; font-weight: bold;">{{ item.name }}</td>
+				<td>
+					{% if item.option != null %}
+						{% for op in item.option %}
+							<p>{{ op.id }}  <b>{{ op.name }}</b>
+							{{ op.description }}</p>
+						{% endfor %}
+					{% else %}
+						{{ item. description}}
+					{% endif %}
+				</td>
+				<td>
+					{% if item.option != null %}
+						{% for op in item.option %}
+							<p>{{ op.price }}</p>
+						{% endfor %}
+					{% else %}
+						{{ item.price }}
+					{% endif %}
+				</td>
+			</tr>
+			{% endfor %}
+		</table>
+	</div>
+</div>

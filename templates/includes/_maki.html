@@ -1,0 +1,79 @@
+<div id="maki" class="tab-pane fade">
+	<div class="row">
+		<h1 style="display:inline-block">MAKI & HAND ROLL</h1>
+		<a href="#vege" id="vegOptionScrollDown">Vegetarian Option <span class="glyphicon glyphicon-chevron-down"></span></a>
+	</div>
+	<div class="row">
+		<div class="col-sm-8">
+			<table>
+			<tr>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th class="text-right">Maki<br/>6pcs</th>
+				<th class="text-right">Hand Roll<br/>1pc</th>
+			</tr>
+				
+			{% for item in maki %}
+			<tr>
+				<td>{{item.id}}</td>
+				<td style="font-size:1.2em; font-weight: bold;">{{item.name}}</td>
+				<td>{{item.description}}</td>
+				<td class="text-right">{{item.priceM}}</td>
+				<td class="text-right">{{item.priceH}}</td>
+			</tr>
+			{% endfor %}
+			{% for item in maki2 %}
+			<tr>
+				<td>{{item.id}}</td>
+				<td style="font-size:1.2em; font-weight: bold;">{{item.name}}</td>
+				<td>{{item.description}}</td>
+				<td class="text-right">{{item.priceM}}</td>
+				<td class="text-right">{{item.priceH}}</td>
+			</tr>
+			{% endfor %}
+			</table>
+
+			<hr />
+			<hr />
+			<hr />
+
+			<div class="row">
+				<h1>VEG MAKI & HAND ROLL </h1>
+			</div>
+			<table id="vege">
+			<tr>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th class="text-right">Maki<br/>6pcs</th>
+				<th class="text-right">Hand Roll<br/>1pc</th>
+			</tr>
+				
+			{% for item in vegMaki %}
+			<tr>
+				<td>{{item.id}}</td>
+				<td style="font-size:1.2em; font-weight: bold;">{{item.name}}</td>
+				<td>{{item.description}}</td>
+				<td class="text-right">{{item.priceM}}</td>
+				<td class="text-right">{{item.priceH}}</td>
+			</tr>
+			{% endfor %}			
+			</table>
+
+		</div>
+		<div class="col-sm-4">
+			<img src="{{url_for('static', filename='menu/maki1.jpg')}}" alt="maki1">
+			<img src="{{url_for('static', filename='menu/maki2.jpg')}}" alt="maki2">
+			<img src="{{url_for('static', filename='menu/maki3.jpg')}}" alt="maki3">
+			<img src="{{url_for('static', filename='menu/maki4.jpg')}}" alt="maki4">
+			<img src="{{url_for('static', filename='menu/maki5.jpg')}}" alt="maki5">
+			<img src="{{url_for('static', filename='menu/maki6.jpg')}}" alt="maki6">
+			<img src="{{url_for('static', filename='menu/maki7.jpg')}}" alt="maki7">
+			<img src="{{url_for('static', filename='menu/maki8.jpg')}}" alt="maki8">
+			<img src="{{url_for('static', filename='menu/maki9.jpg')}}" alt="maki9">
+			<img src="{{url_for('static', filename='menu/vMaki1.jpg')}}" alt="maki10">
+			<img src="{{url_for('static', filename='menu/vMaki2.jpg')}}" alt="maki11">
+		</div>
+	</div>
+</div>

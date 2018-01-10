@@ -1,3 +1,9 @@
+def Admin():
+	admin = {
+		'username': 'niji',
+		'password': 'nijisushitoronto'
+	}
+	return admin;
 def Appetizers():
 	appetizers = [
 		{
@@ -40,7 +46,7 @@ def Appetizers():
 			'id': '7',
 			'name': 'Edamame',
 			'description': 'Boiled soy beans seasoned with salt',
-			'price': 4.95
+			'price': '4.95'
 		},
 		{
 			'id': '8',
@@ -116,7 +122,7 @@ def Appetizers():
 		}
 	]
 
-	return appetizers;
+	return appetizers
 
 def Lunch():
 	lunch = [
@@ -224,3 +230,477 @@ def Lunch():
 	}
 	]
 	return lunch
+
+def Tray(): 
+	tray = [
+	{
+		'id': 'J1',
+		'name': 'SUSHI & MAKI',
+		'option': [
+		{
+			'id': '*',
+			'name': 'Small',
+			'description': '(2 - 3 Guests)',
+			'price': '40.00'
+		},
+		{
+			'id': '*',
+			'name': 'Medium',
+			'description': '(5 - 6 Guests)',
+			'price': '55.00'
+		},
+		{
+			'id': '*',
+			'name': 'Large',
+			'description': '',
+			'price': '70.00'
+		}
+		]
+
+	},
+	{
+		'id': 'J2',
+		'name': 'SUSHI, SASHIMI & MAKI',
+		'option': [
+		{
+			'id': '*',
+			'name': 'Small',
+			'description': '(2 - 3 Guests)',
+			'price': '45.00'
+		},
+		{
+			'id': '*',
+			'name': 'Medium',
+			'description': '(5 - 6 Guests)',
+			'price': '60.00'
+		},
+		{
+			'id': '*',
+			'name': 'Large',
+			'description': '',
+			'price': '75.00'
+		}
+		]
+	},
+	{
+		'id': 'J3',
+		'name': 'MAKI COMBO',
+		'option': [
+		{
+			'id': '*',
+			'name': 'Medium',
+			'description': '',
+			'price': '60.00'
+		}
+		]
+	}
+	]
+	return tray
+
+def SoupNSalad():
+	soupNsalad = [
+	{
+		'id': '17',
+		'name': 'Miso Soup',
+		'description': 'Soy bean paste soup with green onions',
+		'price': '1.50'
+	},	
+	{
+		'id': '18',
+		'name': 'Gyoza Soup',
+		'description': 'Beef wonton soup with green onions',
+		'price': '4.95'
+	},	
+	{
+		'id': '19',
+		'name': 'Osumashi Soup',
+		'description': 'Clear soup with mussels, bean curds, green onions',
+		'price': '4.95'
+	},	
+	{
+		'id': '20',
+		'name': 'Rice Soup',
+		'option': [
+		{
+			'id': '*',
+			'name': 'Small',
+			'description': '',
+			'price': '3.95'
+		},		{
+			'id': '*',
+			'name': 'Medium',
+			'description': '',
+			'price': '5.95'
+		},		{
+			'id': '*',
+			'name': 'Large',
+			'description': '',
+			'price': '10.95'
+		}
+		]
+	},	
+	{
+		'id': '21',
+		'name': 'Green Salad',
+		'description': 'Garden fresh vegetables with Japanese dressing',
+		'price': '4.95'
+	},	{
+		'id': '22',
+		'name': 'Avocado Salad',
+		'description': 'Avocados and garden fresh vegetables with Japanese dressing',
+		'price': '6.95'
+	},	{
+		'id': '23',
+		'name': 'Sunomono Salad',
+		'description': 'Seafood with special dressing',
+		'price': '5.95'
+	},	{
+		'id': '24',
+		'name': 'Wakame Salad',
+		'description': 'Leaf type seaweed with your choice of spicy or regular dressing',
+		'price': '4.95'
+	},	{
+		'id': '25',
+		'name': 'Seasoned Seaweed Salad',
+		'description': 'Seasoned string type of seaweed salad with seasame seeds',
+		'price': '4.95'
+	}
+	]
+	return soupNsalad
+
+def Maki():
+	maki = [
+	{
+		'id': '101',
+		'name': 'California',
+		'description': '',
+		'priceM': '4.95',
+		'priceH': '3.95'
+	},
+	{
+		'id': '102',
+		'name': 'Salmon',
+		'description': 'Sake',
+		'priceM': '5.95',
+		'priceH': '4.95'
+	},
+	{
+		'id': '103',
+		'name': 'Tuna',
+		'description': 'Maguro',
+		'priceM': '6.95',
+		'priceH': '4.95'
+	},
+	{
+		'id': '104',
+		'name': 'Spicy California',
+		'description': '',
+		'priceM': '6.95',
+		'priceH': '4.95'
+	},
+	{
+		'id': '105',
+		'name': 'Spicy Salmon',
+		'description': '',
+		'priceM': '6.95',
+		'priceH': '4.95'
+	},
+	{
+		'id': '106',
+		'name': 'Spicy Tuna',
+		'description': '',
+		'priceM': '6.95',
+		'priceH': '4.95'
+	},
+	{
+		'id': '107',
+		'name': 'Spicy Kani',
+		'description': '',
+		'priceM': '6.95',
+		'priceH': '4.95'
+	},
+	{
+		'id': '108',
+		'name': 'Spicy Scallop',
+		'description': '',
+		'priceM': '8.95',
+		'priceH': '5.95'
+	},
+	{
+		'id': '109',
+		'name': 'Salmon Skin',
+		'description': '',
+		'priceM': '4.95',
+		'priceH': '3.95'
+	},
+	{
+		'id': '110',
+		'name': 'Negi Toro',
+		'description': 'Tuna & green onions',
+		'priceM': '5.95',
+		'priceH': '4.95'
+	},
+	{
+		'id': '111',
+		'name': 'Hamachi',
+		'description': 'Yellow Tail',
+		'priceM': '6.95',
+		'priceH': '4.95'
+	}
+	]
+	return maki
+
+def VegMaki(): 
+	vegMaki = [
+	{
+		'id': '112',
+		'name': 'Cucumber',
+		'description': 'Kappa',
+		'priceM': '3.95',
+		'priceH': '3.50'
+	},
+	{
+		'id': '113',
+		'name': 'Avocado',
+		'description': '',
+		'priceM': '5.95',
+		'priceH': '3.95'
+	},
+	{
+		'id': '114',
+		'name': 'Yam Tempura',
+		'description': '',
+		'priceM': '4.95',
+		'priceH': '2.95'
+	},
+	{
+		'id': '115',
+		'name': 'Mushroom',
+		'description': '',
+		'priceM': '4.95',
+		'priceH': '2.95'
+	},
+	{
+		'id': '116',
+		'name': 'Oshinko',
+		'description': 'Pickled radish',
+		'priceM': '3.95',
+		'priceH': '2.95'
+	},
+	{
+		'id': '117',
+		'name': 'Buttercup Squash',
+		'description': 'Deep fried',
+		'priceM': '4.95',
+		'priceH': '2.95'
+	},
+	{
+		'id': '118',
+		'name': 'Avocado & Cucumber',
+		'description': '',
+		'priceM': '4.95',
+		'priceH': '3.95'
+	},
+	{
+		'id': '119',
+		'name': 'Avocado & Yam Tempura',
+		'description': '',
+		'priceM': '7.95',
+		'priceH': '4.95'
+	},
+	{
+		'id': '120',
+		'name': 'Asparagus',
+		'description': 'with avocado and yam',
+		'priceM': '7.95',
+		'priceH': '4.95'
+	},
+	{
+		'id': '121',
+		'name': 'Spicy Vegetable',
+		'description': 'avocado & cucumber',
+		'priceM': '6.95',
+		'priceH': '4.95'
+	},
+	{
+		'id': '122',
+		'name': 'Vegetable Dragon',
+		'description': '8pcs, Yam tempura base',
+		'priceM': '9.95',
+		'priceH': '-'
+	}
+	]
+	return vegMaki
+
+def Maki2():
+	maki = [
+	{
+		'id': '123',
+		'name': 'Unagi',
+		'description': 'BBQ eel with avocado',
+		'priceM': '8.95',
+		'priceH': '4.95'
+	},
+	{
+		'id': '124',
+		'name': 'BBQ Chicken',
+		'description': 'with cucumber & avocado',
+		'priceM': '7.95',
+		'priceH': '5.95'
+	},
+	{
+		'id': '125',
+		'name': 'Kani',
+		'description': 'crabmeat',
+		'priceM': '5.95',
+		'priceH': '4.95'
+	},
+	{
+		'id': '126',
+		'name': 'Tamago',
+		'description': 'Egg',
+		'priceM': '4.95',
+		'priceH': '3.95'
+	},
+	{
+		'id': '127',
+		'name': 'Futo',
+		'description': 'Vegetables only, or crabmeat, vegetables, egg & tobiko',
+		'priceM': '8.95',
+		'priceH': '4.95'
+	},
+	{
+		'id': '128',
+		'name': 'Alaska',
+		'description': '8pcs. Salmon, tobiko, avocado, crabmeat & cucumber',
+		'priceM': '8.95',
+		'priceH': '4.95'
+	},
+	{
+		'id': '129',
+		'name': 'Philadelphia',
+		'description': '8pcs. Cooked salmon, cucumber, cream cheese, tobiko & avocado',
+		'priceM': '9.95',
+		'priceH': '4.95'
+	},
+	{
+		'id': '130',
+		'name': 'Fresh Philadelphia',
+		'description': '8pcs. Raw salmon, cucumber, cream cheese, tobiko & avocado',
+		'priceM': '9.95',
+		'priceH': '4.95'
+	},
+	{
+		'id': '131',
+		'name': 'White Fish Tempura',
+		'description': '8pcs. Deep fried white fish, tobiko, avocado & cucumber',
+		'priceM': '9.95',
+		'priceH': '4.95'
+	},
+	{
+		'id': '132',
+		'name': 'Salmon Tempura',
+		'description': '8pcs. Deep fried salmon, tobiko, avocado & cucumber',
+		'priceM': '9.95',
+		'priceH': '4.95'
+	},
+	{
+		'id': '133',
+		'name': 'Rainbow',
+		'description': '8pcs. Assorted fish on top of California roll',
+		'priceM': '9.95',
+		'priceH': '4.95'
+	},
+	{
+		'id': '134',
+		'name': 'Spider',
+		'description': '8pcs. Deep fried soft shell crab, avocado, cucumber & tobiko',
+		'priceM': '12.95',
+		'priceH': '5.95'
+	},
+	{
+		'id': '135',
+		'name': 'Dynamite',
+		'description': '8pcs. Shrimp tempura, avocado, cucumber & tobiko',
+		'priceM': '8.95',
+		'priceH': '5.95'
+	},
+	{
+		'id': '136',
+		'name': 'Caterpillar',
+		'description': '8pcs. Avocado on top of unagi roll',
+		'priceM': '11.95',
+		'priceH': '7.95'
+	},
+	{
+		'id': '137',
+		'name': 'California Dragon',
+		'description': '8pcs.',
+		'priceM': '8.95',
+		'priceH': '-'
+	},
+	{
+		'id': '138',
+		'name': 'Spicy Salmon Dragon',
+		'description': '8pcs',
+		'priceM': '9.95',
+		'priceH': '-'
+	},
+	{
+		'id': '139',
+		'name': 'Spicy Tuna Dragon',
+		'description': '8pcs',
+		'priceM': '9.95',
+		'priceH': '-'
+	},
+	{
+		'id': '140',
+		'name': 'Red Dragon',
+		'description': '10pcs. Fresh salmon on top of Dynamite roll',
+		'priceM': '12.95',
+		'priceH': '-'
+	},
+	{
+		'id': '141',
+		'name': 'Green Dragon Roll',
+		'description': '10pcs. Avocado on top of Dynamite roll',
+		'priceM': '12.95',
+		'priceH': '-'
+	},
+	{
+		'id': '142',
+		'name': 'Black Dragon',
+		'description': '10pcs. Unagi on top of Dynamite roll',
+		'priceM': '15.95',
+		'priceH': '-'
+	},
+	{
+		'id': '143',
+		'name': 'Black Dragon',
+		'description': 'Unagi on top and inside',
+		'priceM': '16.95',
+		'priceH': '-'
+	},
+	{
+		'id': '144',
+		'name': 'Lobster Tail',
+		'description': '',
+		'priceM': '17.95',
+		'priceH': '8.95'
+	},
+	{
+		'id': '145',
+		'name': 'Crispy Roll',
+		'description': '8pcs. Smoked salmon, shrimp tempura, crabmeat, avocado, cucumber & tobiko roll covered with tempura bits',
+		'priceM': '14.95',
+		'priceH': '-'
+	},
+	{
+		'id': '146',
+		'name': 'Crunch Roll',
+		'description': 'Deep fried Dynamite roll',
+		'priceM': '12.95',
+		'priceH': '6.95'
+	}
+	]
+	return maki
