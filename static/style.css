@@ -10,6 +10,7 @@ pre {
 /* Navbar CSS */
 .navbar {
 	background-color: rgba(200, 200, 200, 0.5);
+/*	background-color: #b2b2b2;*/
 	font-family: "Lucida Console", Monaco, monospace;
 	border: none;
 }
@@ -65,7 +66,7 @@ pre {
 .carousel-inner .item img {
 	width: 100%;
 	height: auto;
-	opacity: 0.8;
+	opacity: 1;
 }
 
 .mycarousel-caption * {
@@ -82,15 +83,38 @@ pre {
 	font-size: 100%;
 }
 
+.myAbout {
+	padding: 20px;
+	margin: 100px 10vw 100px 10vw;
+}
+
+.myAbout * {
+	font-family: 'Glegoo', serif;
+}
+
+#aboutPhoto {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: 5vw;
+}
+
+#aboutPhoto img {
+	height: 13vw;
+	width: auto;
+}
+
 .myOpeningHours {
 	width: 100%;
 	padding-top: 10vw;
 	padding-bottom: 10vw;
 	overflow: auto;
+	background-image: url('../static/background.jpg');
+	background-size: 100% 100%;
 }
 
 .myOpeningHours div {
 	text-align: center;
+	font-size:80%;
 	padding-bottom: 30px;
 }
 
@@ -192,7 +216,7 @@ pre {
 }
 
 .myMenuNav li {
-	width: 23%;
+	width: 18%;
 	margin: 2px;
 	margin-bottom: 10px;
 	border: 2px solid white;

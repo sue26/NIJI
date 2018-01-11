@@ -16,20 +16,11 @@
 				
 			{% for item in maki %}
 			<tr>
-				<td>{{item.id}}</td>
+				<td>{{item.num}}</td>
 				<td style="font-size:1.2em; font-weight: bold;">{{item.name}}</td>
 				<td>{{item.description}}</td>
-				<td class="text-right">{{item.priceM}}</td>
-				<td class="text-right">{{item.priceH}}</td>
-			</tr>
-			{% endfor %}
-			{% for item in maki2 %}
-			<tr>
-				<td>{{item.id}}</td>
-				<td style="font-size:1.2em; font-weight: bold;">{{item.name}}</td>
-				<td>{{item.description}}</td>
-				<td class="text-right">{{item.priceM}}</td>
-				<td class="text-right">{{item.priceH}}</td>
+				<td class="text-right">{{item.price1}}</td>
+				<td class="text-right">{{item.price2}}</td>
 			</tr>
 			{% endfor %}
 			</table>
@@ -52,11 +43,11 @@
 				
 			{% for item in vegMaki %}
 			<tr>
-				<td>{{item.id}}</td>
+				<td>{{item.num}}</td>
 				<td style="font-size:1.2em; font-weight: bold;">{{item.name}}</td>
 				<td>{{item.description}}</td>
-				<td class="text-right">{{item.priceM}}</td>
-				<td class="text-right">{{item.priceH}}</td>
+				<td class="text-right">{{item.price1}}</td>
+				<td class="text-right">{{item.price2}}</td>
 			</tr>
 			{% endfor %}			
 			</table>

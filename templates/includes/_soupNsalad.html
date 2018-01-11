@@ -6,29 +6,7 @@
 		<div class="col-sm-8">
 			<table>
 				{% for item in soupNsalad %}
-				<tr>
-					<td>{{ item.id }}</td>
-					<td style="width: 30%; font-size: 1.2em; font-weight: bold;">{{ item.name }}</td>
-					<td>
-						{% if item.option != null %}
-							{% for op in item.option %}
-								<p>{{ op.id }}  <b>{{ op.name }}</b>
-								{{ op.description }}</p>
-							{% endfor %}
-						{% else %}
-							{{ item. description}}
-						{% endif %}
-					</td>
-					<td>
-						{% if item.option != null %}
-							{% for op in item.option %}
-								<p>{{ op.price }}</p>
-							{% endfor %}
-						{% else %}
-							{{ item.price }}
-						{% endif %}
-					</td>
-				</tr>
+					{% include 'includes/_menuTable.html' %}
 				{% endfor %}
 			</table>
 		</div>

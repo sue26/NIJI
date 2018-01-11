@@ -5,14 +5,17 @@
 <div class="myMenu container" style="background-color: white;">
 	
 	<ul class="nav nav-pills myMenuNav">
-		<li class="active"><a data-toggle="pill" href="#tray">Combination Tray</a></li>
-	 	<li><a data-toggle="pill" href="#lunc">Lunch</a></li>
-		<li><a data-toggle="pill" href="#appe">Appetizers</a></li>
+		<li class="active"><a data-toggle="pill" href="#appe">Appetizers</a></li>
 	 	<li><a data-toggle="pill" href="#soup">Soups & Salad</a></li>
 	 	<li><a data-toggle="pill" href="#maki">Maki & Hand Roll</a></li>
 	 	<li><a data-toggle="pill" href="#alac">&Agrave; la Carte</a></li>
 	 	<li><a data-toggle="pill" href="#main">Main Dishes</a></li>
+	 	<li><a data-toggle="pill" href="#sushi">Sushi Dinner</a></li>
+	 	<li><a data-toggle="pill" href="#love">Love Boat</a></li>
 	 	<li><a data-toggle="pill" href="#bent">Combination Bento</a></li>
+	 	<li><a data-toggle="pill" href="#lunc">Lunch</a></li>
+	 	<li><a data-toggle="pill" href="#tray">Combination Tray</a></li>
+
 	</ul>
 	
 	<div class="tab-content myTabContent">
@@ -21,23 +24,16 @@
 		{% include 'includes/_appetizers.html' %}
 		{% include 'includes/_soupNsalad.html' %}
 		{% include 'includes/_maki.html' %}
-		<div id="alac" class="tab-pane fade">
-  			<h1>&Agrave; LA CARTE</h1>
-  			<p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-		</div>
-		<div id="main" class="tab-pane fade">
-  			<h1>MAIN DISHES</h1>
-  			<p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-		</div>
-		<div id="nood" class="tab-pane fade">
-  			<h1>NOODLE SOUP</h1>
-  			<p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-		</div>
-		<div id="bent" class="tab-pane fade">
-  			<h1>COMBINATION BENTO</h1>
-  			<p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-		</div>
+		{% include 'includes/_alacarte.html' %}
+		{% include 'includes/_maindish.html' %}
+		{% include 'includes/_sushi.html' %}
+		{% include 'includes/_love.html' %}
+		{% include 'includes/_maindish.html' %}
+		{% include 'includes/_bento.html' %}
   	</div>
 </div>
 
+<script>
+
+</script>
 {% endblock %}

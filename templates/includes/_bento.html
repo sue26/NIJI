@@ -1,0 +1,18 @@
+<div id="bent" class="tab-pane fade">
+	<div class="row">
+		<h1>COMBINATION BENTO</h1>
+		<p style="color:green">Served with green salad and miso soup</p>
+	</div>
+	<div class="row">
+		<div class="col-sm-8">
+			<table>
+				{% for item in bento %}
+					{% include 'includes/_menuTable.html' %}
+				{% endfor %}
+			</table>
+		</div>
+		<div class="col-sm-4">
+			<img src="{{url_for('static', filename='menu/soup1.jp')}}" alt="soup1">
+		</div>
+	</div>
+</div>

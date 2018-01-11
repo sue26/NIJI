@@ -1,0 +1,35 @@
+<tr>
+	<td>{{ item.num }}</td>
+	<td style="width: 30%; font-size: 1.2em; font-weight: bold;">{{ item.name }}</td>
+	{% if item.id in optionsArray %}
+	<!-- There are options to the item -->
+	<td>
+		{% for op in options %}
+			{% if op.m_id == item.id %}
+				<p> * <b>{{ op.name }}</b>
+					{% if op.description != '' %}
+						({{op.description}})
+					{% endif %}
+				</p>
+			{% endif %}
+		{% endfor %}
+	</td>
+	<td class="text-right">
+		{% for op in options %}
+			{% if op.m_id == item.id %}
+			<p>{{ op.price }}</p>
+			{% endif %}
+		{% endfor %}
+	</td>
+	{% else %}
+	<!-- No options to the item -->
+	<td>
+		{% autoescape false %}
+			{{ item.description }}
+		{% endautoescape %}
+	</td>
+	<td class="text-right">
+		{{ item.price }}
+	</td>
+	{% endif %}
+</tr>

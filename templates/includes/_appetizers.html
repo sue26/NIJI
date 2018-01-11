@@ -1,4 +1,4 @@
-<div id="appe" class="tab-pane fade">
+<div id="appe" class="tab-pane fade in active">
 	<div class="row">
 		<h1>APPETIZERS</h1>
 	</div>
@@ -6,12 +6,7 @@
 		<div class="col-sm-8">
   			<table>
   				{% for item in appetizers %}
-				<tr>
-					<td>{{item.id}}</td>
-					<td style="font-size:1.2em; font-weight: bold;">{{item.name}}</td>
-					<td>{{item.description}}</td>
-					<td class="text-right">{{item.price}}</td>
-				</tr>
+					{% include 'includes/_menuTable.html' %}
 				{% endfor %}
   			</table>
 		</div>
