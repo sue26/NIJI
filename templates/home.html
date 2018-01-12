@@ -112,27 +112,30 @@
     <img src="{{url_for('static', filename='about/a6.jpg')}}">
   </div>
 
-<div class="myOpeningHours container">
-	<div class="row">
-		<h1 style="font-size: 2.3em;"><b>Opening Hours</b></h1>
-	</div>
-	<div class="col-xs-4 myBorderRight">
-		<h4><b>Mon - Thurs</b></h4>
-		<p>11:30am - 10:00pm</p>
-	</div>
-	<div class="col-xs-4 myBorderRight">
-		<h4><b>Fri - Sat</b></h4>
-		<p>11:30am - 11:00pm</p>
-	</div>
-	<div class="col-xs-4">
-		<h4><b>Sun</b></h4>
-		<p>Closed</p>
-	</div>
+<div class="mySeeMenu">
+  <div class="col-sm-6">
+    <a><button class="seeMenu">See Menu</button></a>
+  </div>
+  <div class="col-sm-6">
+    <a><button class="seeMenu">See Vegetarian Option</button></a>
+  </div>
 </div>
 
 <div class="myMap row">
-	<div class="col-sm-5"> 
-		<h1 style="font-size: 2em; margin-top: 30px; margin-bottom: 30px;"><b>Location</b></h1>
+  <div class="col-sm-3">
+    <h1 style="font-size: 2em; margin-bottom: 30px;"><b>Opening Hours</b></h1>
+
+    <p><b>Mon - Thurs</b></p>
+    <p>11:30am - 10:00pm</p>
+    <hr />
+    <h6><b>Fri - Sat</b></h6>
+    <p>11:30am - 11:00pm</p>
+    <hr />
+    <h6><b>Sun</b></h6>
+    <p>Closed</p>
+  </div>
+	<div class="col-sm-3"> 
+		<h1 style="font-size: 2em; margin-bottom: 30px;"><b>Location</b></h1>
 		<pre>1095 Ellesmere Rd
 		Toronto, ON, M1P 2X2</pre>
 		<p style="font-size: 1em;">South West Corner of Midland and Ellesmere</p>
@@ -141,7 +144,7 @@
 		<p>By Transit: </p>
 		<p style="font-size:1em;">1 min walk away from <br /><i>Midland Station</i> and <i>Ellesmere Station</i></p>
 	</div>
-	<div class="col-sm-7">
+	<div class="col-sm-6">
 		<iframe id="myGoogleMap"
 			frameborder="0" style="border:0"
 			src="https://www.google.com/maps/embed/v1/place

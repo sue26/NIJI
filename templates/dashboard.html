@@ -1,0 +1,47 @@
+{% extends 'dashboard_layout.html' %}
+
+{% block body %}
+<div style="display: block; width:100%; height: 50px;margin:5px;">
+	<a class="btn btn-success" href="/add_menu" style="float:right;"><span class="glyphicon glyphicon-plus"></span> Add Menu</a>
+</div>
+<div class="panel-group" id="accordion">
+	{% for type in types %}
+		<div class="panel panel-default">
+			<a data-toggle="collapse" href="#{{type}}" data-parent="accordion" style="text-decoration: none;">
+			    <div class="panel-heading" style="background-color: #09094f; color:white;">
+			      <h3 class="panel-title">
+		        	{% if type == 'lunch' %} Lunch
+		        	{% elif type == 'appetizer' %} Appetizers
+		        	{% elif type == 'tray' %} Combination Tray
+		        	{% elif type == 'soupNsalad' %} Soup & Salad
+		        	{% elif type == 'maki' %} Maki
+		        	{% elif type == 'vegmaki' %} Vegetable Maki
+		        	{% elif type == 'alacarte' %} &Agrave; la carte
+		        	{% elif type == 'sashimi' %} Sashimi
+		        	{% elif type == 'maindish' %} Main Dish
+		        	{% elif type == 'sushidinner' %} Sushi Dinner
+		        	{% elif type == 'love' %} Love Boat
+		        	{% elif type == 'bento' %} Bento Box
+		        	{% endif %}
+		        	</h3>
+		    	</div>
+		    </a>
+
+		    <div id="{{type}}" class="panel-collapse collapse">
+		      <div class="card-body">
+		        <div class="table">
+		        	{% for item in menu %}
+		        		{% if item.type == type %}
+		        		<a class="table-row" href="/edit_menu/{{item.id}}">
+		        			<div class="table-cell" style="font-weight: bold;">{{item.name}}</div>
+		        			<div class="table-cell">{{item.description}}</div>
+		        		</a>
+		        		{% endif %}
+		        	{% endfor %}
+		        </div>
+		      </div>
+		    </div>
+	    </div>
+	{% endfor %}
+</div>
+{% endblock %}

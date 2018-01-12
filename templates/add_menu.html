@@ -1,0 +1,38 @@
+{% extends 'dashboard_layout.html' %}
+
+{% block body %}
+<h1>Add Menu</h1>
+	{% from 'includes/_formhelpers.html' import render_field %}
+	<form method="POST" action="">
+		<div class="form-group">
+			{{render_field(form.num, class = "form-control")}}
+		</div>
+		<div class="form-group">
+			{{render_field(form.name, class = "form-control")}}
+		</div>
+		<div class="form-group">
+			{{render_field(form.type)}}
+		</div>
+		<div class="form-group">
+			{{render_field(form.description, class = "form-control")}}
+		</div>
+		<div class="form-group">
+			<p style="color:red"><span class="glyphicon glyphicon-arrow-down"></span>Fill Price #1 below for <b>maki / veg maki</b> or <b>sushi</b> prices</p>
+			{{render_field(form.price1, class = "form-control")}}
+		</div>
+		<div class="form-group">
+			<p style="color:red"><span class="glyphicon glyphicon-arrow-down"></span>Fill Price #2 below for <b>hand roll</b> or <b>sashimi</b> prices</p>
+			{{render_field(form.price2, class = "form-control")}}
+		</div>
+		<div class="form-group">
+			<p style="color:red"><span class="glyphicon glyphicon-arrow-down"></span>Fill Price below for everything <b>except</b> maki/handroll and sushi/sashimi</p>
+			{{render_field(form.price, class = "form-control")}}
+		</div>
+
+		<p>
+			<a class="btn btn-default" href="/dashboard">Cancel</a>
+			<button class="btn btn-primary" type="submit">Add</button>
+		</p>
+	</form>
+
+{% endblock %}

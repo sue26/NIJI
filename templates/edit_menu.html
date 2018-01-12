@@ -1,0 +1,78 @@
+{% extends 'dashboard_layout.html' %}
+
+{% block body %}
+<h1>Edit Menu</h1>
+	{% from 'includes/_formhelpers.html' import render_field %}
+	<form method="POST" action="">
+		<div class="form-group">
+			{{render_field(form.num, class = "form-control")}}
+		</div>
+		<div class="form-group">
+			{{render_field(form.name, class = "form-control")}}
+		</div>
+
+		{% if options %}
+			<label>Options: </label>
+			<a class="btn btn-success" href="/add_option/{{id}}">Add</a>
+			<table id="optionsTable" style="width: 100%; background-color: white;">
+				<tr>
+					<th>Name</th>
+					<th>Description</th>
+					<th>Price</th>
+					<th></th>
+				</tr>
+				{% for op in options %}
+				<tr>
+					<td>{{op.name}}</td>
+					<td>{{op.description}}</td>
+					<td>{{op.price}}</td>
+					<td style="float:right;">
+						<a class="btn btn-default" href="/edit_option/{{op.id}}">Edit</a>
+						<a class="btn btn-danger" href="/delete_option/{{op.id}}">Delete</a>
+					</td>
+					</div>
+				</tr>
+				{% endfor %}
+			</table>
+		{% else %}
+			<div class="form-group">
+				{{render_field(form.description, class = "form-control")}}
+			</div>
+
+			{% if form.type.data == 'maki' or form.type.data == 'vegmaki' %}
+				<div class="form-group">
+					<p><b>(Maki<span class="glyphicon glyphicon-arrow-down"></span>)</b></p>
+					{{render_field(form.price1, class = "form-control")}}
+				</div>
+				<div class="form-group">
+					<p><b>(Hand Roll<span class="glyphicon glyphicon-arrow-down"></span>)</b></p>
+					{{render_field(form.price2, class = "form-control")}}
+				</div>
+			{% elif form.type.data == 'alacarte' %}
+				<div class="form-group">
+					<p><b>(Sushi<span class="glyphicon glyphicon-arrow-down"></span>)</b></p>
+					{{render_field(form.price1, class = "form-control")}}
+				</div>
+				<div class="form-group">
+					<p><b>(Sashimi<span class="glyphicon glyphicon-arrow-down"></span>)</b></p>
+					{{render_field(form.price2, class = "form-control")}}
+				</div>
+			{% else %}
+				<div class="form-group">
+					{{render_field(form.price, class = "form-control")}}
+				</div>
+			{% endif %}
+		{% endif %}
+
+		<div class="form-group">
+			{{render_field(form.type)}}
+		</div>
+
+		<p>
+			<a class="btn btn-default" href="/dashboard">Cancel</a>
+			<button class="btn btn-primary" type="submit">Update</button>
+			<a class="btn btn-danger" href="/delete_menu/{{id}}" style="float:right;">Delete</a>
+		</p>
+	</form>
+
+{% endblock %}

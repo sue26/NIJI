@@ -24,9 +24,7 @@
 	{% else %}
 	<!-- No options to the item -->
 	<td>
-		{% autoescape false %}
-			{{ item.description }}
-		{% endautoescape %}
+		{{ item.description | nl2br }}
 	</td>
 	<td class="text-right">
 		{{ item.price }}

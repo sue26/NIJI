@@ -103,13 +103,30 @@ pre {
 	width: auto;
 }
 
+.mySeeMenu {
+	width: 100%;
+	background-image: url('../static/background_seemenu.jpg');
+	opacity:0.9;
+	height: 50vw;
+	margin-top:30px;
+}
+
+.seeMenu {
+	border: 2px solid black;
+	border-radius: 5px;
+	padding:20px;
+	opacity: 1;
+	margin-left: 40%;
+	background-color: transparent;
+	color: white;
+}
+
 .myOpeningHours {
 	width: 100%;
 	padding-top: 10vw;
 	padding-bottom: 10vw;
 	overflow: auto;
-	background-image: url('../static/background.jpg');
-	background-size: 100% 100%;
+
 }
 
 .myOpeningHours div {
@@ -131,15 +148,16 @@ pre {
 
 .myMap {
 	padding: 5vw;
+	background-image: url('../static/background.jpg');
+	background-size: 100% 100%;
 }
 
 .myMap div {
-	text-align: right;
+	text-align: center;
 }
 
 .myMap div * {
 	font-family: 'Glegoo', serif;
-	font-size: 100%;
 }
 
 @media screen and (max-width : 700px) {
@@ -157,7 +175,7 @@ pre {
 	}
 	.myOpeningHours div *, .myMap div * {
 		font-family: 'Glegoo', serif;
-		font-size: 1.1em;
+		font-size: 1em;
 	}
 	.myMenuNav li a {
 		text-align: center;
@@ -191,7 +209,7 @@ pre {
 	}
 	.myOpeningHours div *, .myMap div * {
 		font-family: 'Glegoo', serif;
-		font-size: 1.5em;
+		font-size: 1.2em;
 	}
 	.myMenuNav li a {
 		text-align: center;
@@ -266,6 +284,46 @@ pre {
 	text-decoration: none;
 	background-color: green;
 	color: white;
+}
+
+#accordion h3 {
+	font-size: 3em;
+}
+
+#accordion .table {
+	display: table;
+	width: 100%;
+}
+
+#accordion .table-cell {
+	display: table-cell;
+	padding: 13px;
+}
+
+#accordion a.table-row {
+	display:table-row;
+}
+
+#accordion a.table-row:nth-child(odd) {
+    background: #f7f7f7;
+}
+
+#accordion .panel-title {
+	font-weight: bold;
+	font-size:1.2em;
+}
+
+#optionsTable {
+	margin: 10px;
+}
+
+#optionsTable td, #optionsTable th {
+	padding: 10px;
+}
+
+#optionsTable tr {
+	border: 1px solid black; 
+	border-collapse: collapse;
 }
 
 #myFooter {

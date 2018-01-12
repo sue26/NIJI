@@ -1,0 +1,39 @@
+<!DOCtype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Sue Bae">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Bootstrap CSS v.3.7.7-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Glegoo" rel="stylesheet">
+    <!-- JS -->
+<!--     <script src="/static/functions.js"></script>
+ -->   <!--  <link href="{{ url_for('static', filename='css/style.scss.css') }}"
+      rel="stylesheet" type="text/css">
+ -->
+	<title>Niji Sushi</title>
+</head>
+<body>
+	<div class="row" style="padding:20px; background-color: #b5b5ce;">
+		<a href="/dashboard"><h1 style="display:inline-block;">Dashboard <small> Welcome {{ session.username }} </small></h1></a>
+		<a href="/logout" class="btn btn-danger" style="display:inline-block; float:right; ">
+			Log out
+		</a>
+	</div>
+	<hr />
+	{% include 'includes/_flashMessages.html' %}
+	<div class="container">
+		{% block body %}{% endblock %}
+	</div>
+
+	<!-- Optional JavaScript -->
+	<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

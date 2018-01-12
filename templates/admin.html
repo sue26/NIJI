@@ -1,0 +1,27 @@
+<!DOCtype html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+	<title>NiJi Sushi</title>
+</head>
+<body>
+	<div class="container">
+		{% include 'includes/_flashMessages.html' %}
+		<div id="login">
+			<h3>NIJI SUSHI JAPANESE RESTAURANT</h3>
+			<form id="loginForm" method="POST" action="">
+				<div class="form-group">
+					<label for="username">Username: </label>
+					<input type="text" class="form-control" name="username" placeholder="Username" value={{request.form.username}}>
+				</div>
+				<div class="form-group">
+					<label for="password">Password: </label>
+					<input type="password" class="form-control" name="password" placeholder="Password">
+				</div>
+				<button type="submit" class="btn btn-primary">Login</button>
+			</form>	
+		</div>
+	</div>
+</body>
+<html>
