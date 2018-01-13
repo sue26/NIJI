@@ -1,4 +1,3 @@
-import sys
 import re
 from flask import Flask, render_template, flash, redirect, url_for, session, logging, request
 from flask_mysqldb import MySQL
@@ -198,18 +197,10 @@ def edit_menu(id):
         name = request.form['name']
         description = request.form['description']
         type = request.form['type']
-        if 'price' in request.form:
-            price = request.form['price']
-        else:
-            price = ''
-        if 'price1' in request.form:
-            price1 = request.form['price1']
-        else: 
-            price1 = ''
-        if 'price2' in request.form:
-            price2 = request.form['price2']
-        else:
-            price2 = ''
+        price = request.form['price']
+        price1 = request.form['price1']
+        price2 = request.form['price2']
+
 
         cur = mysql.connection.cursor()
         cur.execute('update menu set num=%s, name=%s, description=%s, price=%s, price1=%s, price2=%s, type=%s where id=%s',
@@ -249,7 +240,7 @@ def add_menu():
         id = cur.fetchone()
 
         flash('Successfully added ' + name + ' to ' + type, 'success')
-        return render_template('ask_option.html', id=id['id'])
+        return redirect(url_for('dashboard'))
 
     return render_template('add_menu.html', form=form)
 

@@ -13,7 +13,6 @@
     </div>
 
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse navbar-right" id="myNavCollapse">
       <ul class="nav navbar-nav">
         <li><a href="/" id="myMenu" class="{{ 'active' if active_page == 'home' else '' }}">Home</a></li>
@@ -21,24 +20,6 @@
         <li><a href="#" id="myMenu" class="{{ 'active' if active_page == 'gallery' else '' }}">Gallery</a></li>
         <li><a href="#" id="myMenu" class="{{ 'active' if active_page == 'contactUs' else '' }}">Contact Us</a></li>
       </ul> 
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-
-  <!-- <script>
-    $(document).ready(function(){       
-       var scroll_start = 0;
-       var startchange = $('#startchange');
-       var offset = startchange.offset();
-        if (startchange.length){
-       $(document).scroll(function() { 
-          scroll_start = $(this).scrollTop();
-          if(scroll_start > offset.top) {
-              $(".navbar-default").css('background-color', '#f0f0f0');
-           } else {
-              $('.navbar-default').css('background-color', 'transparent');
-           }
-       });
-        }
-    });
-  </script> -->
+    </div>
+  </div>
 </nav>

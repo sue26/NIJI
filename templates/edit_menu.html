@@ -12,6 +12,8 @@
 		</div>
 
 		{% if options %}
+		<!-- Has options : only displays options table. -->
+		<div style="display:block;">
 			<label>Options: </label>
 			<a class="btn btn-success" href="/add_option/{{id}}">Add</a>
 			<table id="optionsTable" style="width: 100%; background-color: white;">
@@ -34,33 +36,65 @@
 				</tr>
 				{% endfor %}
 			</table>
+		</div>
+		<div class="form-group" style="display:none;">
+			{{render_field(form.description, class = "form-control")}}
+		</div>
+		<div class="form-group" style="display:none;">
+			{{render_field(form.price1, class = "form-control")}}
+		</div>
+		<div class="form-group" style="display:none;">
+			{{render_field(form.price2, class = "form-control")}}
+		</div>
+		<div class="form-group" style="display:none;">
+			{{render_field(form.price, class = "form-control")}}
+		</div>
+
 		{% else %}
-			<div class="form-group">
-				{{render_field(form.description, class = "form-control")}}
-			</div>
+		<label>Options: </label>
+		<a class="btn btn-success" href="/add_option/{{id}}">Add</a>
+
+		<div class="form-group">
+			{{render_field(form.description, class = "form-control")}}
+		</div>
 
 			{% if form.type.data == 'maki' or form.type.data == 'vegmaki' %}
-				<div class="form-group">
-					<p><b>(Maki<span class="glyphicon glyphicon-arrow-down"></span>)</b></p>
-					{{render_field(form.price1, class = "form-control")}}
-				</div>
-				<div class="form-group">
-					<p><b>(Hand Roll<span class="glyphicon glyphicon-arrow-down"></span>)</b></p>
-					{{render_field(form.price2, class = "form-control")}}
-				</div>
+			<div class="form-group">
+				<p><b>(Maki<span class="glyphicon glyphicon-arrow-down"></span>)</b></p>
+				{{render_field(form.price1, class = "form-control")}}
+			</div>
+			<div class="form-group">
+				<p><b>(Hand Roll<span class="glyphicon glyphicon-arrow-down"></span>)</b></p>
+				{{render_field(form.price2, class = "form-control")}}
+			</div>
+			<div class="form-group" style="display:none;">
+				{{render_field(form.price, class = "form-control")}}
+			</div>
+
 			{% elif form.type.data == 'alacarte' %}
-				<div class="form-group">
-					<p><b>(Sushi<span class="glyphicon glyphicon-arrow-down"></span>)</b></p>
-					{{render_field(form.price1, class = "form-control")}}
-				</div>
-				<div class="form-group">
-					<p><b>(Sashimi<span class="glyphicon glyphicon-arrow-down"></span>)</b></p>
-					{{render_field(form.price2, class = "form-control")}}
-				</div>
+			<div class="form-group">
+				<p><b>(Sushi<span class="glyphicon glyphicon-arrow-down"></span>)</b></p>
+				{{render_field(form.price1, class = "form-control")}}
+			</div>
+			<div class="form-group">
+				<p><b>(Sashimi<span class="glyphicon glyphicon-arrow-down"></span>)</b></p>
+				{{render_field(form.price2, class = "form-control")}}
+			</div>
+			<div class="form-group" style="display:none;">
+				{{render_field(form.price, class = "form-control")}}
+			</div>
+
 			{% else %}
-				<div class="form-group">
-					{{render_field(form.price, class = "form-control")}}
-				</div>
+			<div class="form-group" style="display:none;">
+				{{render_field(form.price1, class = "form-control")}}
+			</div>
+			<div class="form-group" style="display:none;">
+				{{render_field(form.price2, class = "form-control")}}
+			</div>
+			<div class="form-group"">
+				{{render_field(form.price, class = "form-control")}}
+			</div>
+
 			{% endif %}
 		{% endif %}
 
