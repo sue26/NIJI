@@ -1,8 +1,8 @@
 #ignore env
 env/
 
-#ignore compiled css files
-static/css/
+#libraries
+lib/
 
 # .pyc files
 *.pyc
@@ -10,5 +10,3 @@ static/css/
 #.DS_Store
 .DS_Store
 
-#libraries
-lib/

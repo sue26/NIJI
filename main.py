@@ -144,7 +144,10 @@ def login():
             return render_template('admin.html')
 
         return render_template('admin.html')
-        
+    
+    if session['logged_in']:
+        return redirect(url_for('dashboard')) 
+
     return render_template('admin.html')
 
 @app.route('/dashboard/')

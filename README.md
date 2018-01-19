@@ -18,5 +18,5 @@ The hosting server is with google engine, and the framework used is Flask.
   `python main.py`  
   then connect to localhost:5000  
 
-##Admin Page  
+## Admin Page  
 User can access to the admin page: (e.g. ...path/admin)  

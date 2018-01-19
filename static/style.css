@@ -111,14 +111,26 @@ pre {
 	margin-top:30px;
 }
 
-.seeMenu {
-	border: 2px solid black;
+.seeMenuButton {
+	border: 1px solid white;
 	border-radius: 5px;
 	padding:20px;
 	opacity: 1;
 	margin-left: 40%;
 	background-color: transparent;
 	color: white;
+	font-size: 1.2em;
+	text-decoration: none;
+}
+
+.seeMenuButton:hover {
+	background-color: rgba(0,0,0,0.5);
+}
+
+.seeMenuDescription{
+	color: white;
+	text-align: center;
+	font-size: 1.5em;
 }
 
 .myOpeningHours {
