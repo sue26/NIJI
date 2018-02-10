@@ -9,23 +9,22 @@ pre {
 
 /* Navbar CSS */
 .navbar {
-	background-color: rgba(200, 200, 200, 0.5);
-/*	background-color: #b2b2b2;*/
+	/*background-color: white;*/
 	font-family: "Lucida Console", Monaco, monospace;
 	border: none;
 }
 
-.navbar .container{
+/*.navbar .container{
 	margin:0 auto;
-	height: 14vh;
-}
+	height: 10vh;
+}*/
 
 .navbar-brand {
 	font-size: 200%;
 }
 
 .navbar-header, .navbar-collapse {
-	padding-top: 3vh; /* Manually aligned center vertically */
+	padding-top: 2vh; /* Manually aligned center vertically */
 }
 
 .navbar-toggle {
@@ -40,7 +39,7 @@ pre {
 }
 
 .navbar-nav {
-	background-color: transparent;
+	/*background-color: rgba(200, 200, 200, 0.5);*/
 }
 
 #myMenu {
@@ -54,7 +53,7 @@ pre {
 /* home.html CSS */
 
 #myCarousel {
-	/*margin-top: 13vh*/;
+	/*margin-top: 10vh;*/
 }
 
 .carousel-inner .item {
@@ -85,7 +84,7 @@ pre {
 
 .myAbout {
 	padding: 20px;
-	margin: 100px 10vw 100px 10vw;
+	margin: 50px 10vw 50px 10vw;
 }
 
 .myAbout * {
@@ -107,17 +106,17 @@ pre {
 	width: 100%;
 	background-image: url('../static/background_seemenu.jpg');
 	opacity:0.9;
-	height: 50vw;
+	height: 30vw;
 	margin-top:30px;
+	font-family: 'Glegoo', serif;
 }
 
 .seeMenuButton {
 	border: 1px solid white;
 	border-radius: 5px;
-	padding:20px;
+	padding:10px;
 	opacity: 1;
-	margin-left: 40%;
-	background-color: transparent;
+	background-color: rgba(200,200,200, 0.5);
 	color: white;
 	font-size: 1.2em;
 	text-decoration: none;
@@ -127,10 +126,16 @@ pre {
 	background-color: rgba(0,0,0,0.5);
 }
 
+.seeMenuButton img {
+	width: 100px;
+	height: auto;
+}
+
 .seeMenuDescription{
 	color: white;
 	text-align: center;
-	font-size: 1.5em;
+	font-size: 2em;
+	padding: 80px;
 }
 
 .myOpeningHours {
@@ -173,6 +178,20 @@ pre {
 }
 
 @media screen and (max-width : 700px) {
+	.navbar {
+		background-color: white;
+
+	}
+	.navbar .container{
+		margin:0 auto;
+		height: 15vh;
+	}
+	.navbar-nav {
+		background-color: white;
+	}
+	#myCarousel {
+		margin-top: 15vh;
+	}
 	.mycarousel-caption h1 {
 		font-size: 2em;
 		font-weight: 900;
@@ -204,9 +223,22 @@ pre {
 		height: auto;
 		margin: 5px;
 	}
+	.myMenuNav li {
+		width: 23%;
+	}
 }
 
 @media screen and (min-width : 700px) {
+	.navbar {
+			background-color: rgba(250, 250, 250, 0.5);
+
+	}
+	.navbar .container{
+		margin:0 auto;
+		height: 10vh;
+
+	}
+
 	.mycarousel-caption h1 {
 		font-size: 4em;
 		font-weight: 900;
@@ -232,10 +264,13 @@ pre {
 		height: auto;
 		margin: 5px;
 	}
+	.myMenuNav li {
+		width: 18%;
+	}
 }
 
 .myMenu {
-	margin-top: 13vh;
+	margin-top: 15vh;
 	font-family: 'Glegoo', serif;
 }
 
@@ -246,7 +281,6 @@ pre {
 }
 
 .myMenuNav li {
-	width: 18%;
 	margin: 2px;
 	margin-bottom: 10px;
 	border: 2px solid white;
@@ -280,6 +314,13 @@ pre {
 
 .myTabContent tr:nth-child(odd) {
     background: #f7f7f7;
+}
+
+.myContactUs {
+	margin-top: 15vh;
+	background-color: white;
+	font-family: 'Glegoo', serif;
+	
 }
 
 #vegOptionScrollDown {

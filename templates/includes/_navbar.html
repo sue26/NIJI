@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <img src="{{url_for('static', filename='logo.png')}}">
+      <img src="{{url_for('static', filename='logo.png')}}" style="height: 80%; width: auto;">
       <p class="navbar-text navbar-right">Place your order: (416)755-3335</p>
     </div>
 
@@ -18,7 +18,7 @@
         <li><a href="/" id="myMenu" class="{{ 'active' if active_page == 'home' else '' }}">Home</a></li>
         <li><a href="/menu" id="myMenu" class="{{ 'active' if active_page == 'menu' else '' }}">Menu</a></li>
         <li><a href="#" id="myMenu" class="{{ 'active' if active_page == 'gallery' else '' }}">Gallery</a></li>
-        <li><a href="#" id="myMenu" class="{{ 'active' if active_page == 'contactUs' else '' }}">Contact Us</a></li>
+        <li><a href="/contactUs" id="myMenu" class="{{ 'active' if active_page == 'contactUs' else '' }}">Contact Us</a></li>
       </ul> 
     </div>
   </div>

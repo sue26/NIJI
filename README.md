@@ -4,7 +4,7 @@
 
 ## Intro
 This is an official website for Niji Sushi.  
-The hosting server is with google engine, and the framework used is Flask.  
+The hosting server is with pythonanywhere, and the framework used is Flask.  
 
 ## How To Run 
 1. Install and Activate virtual environment (virtenv)  

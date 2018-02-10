@@ -115,6 +115,10 @@ def menu():
         maki=maki, vegMaki=vegmaki, alacarte=alacarte, sashimi=sashimi,
         maindish=maindish, sushidinner=sushidinner, love=love, bento=bento)
 
+@app.route('/contactUs/')
+def contactUs():
+    return render_template('contactUs.html')
+    
 @app.route('/admin/', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':

@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+{% set active_page = "contactUs" %}
+
+{% block body %}
+<div class="container myContactUs">
+	<div class="row">
+		<div class="col-sm-4" style="padding:20px; text-align: center;ß">
+			<p style="font-size: 2em; font-weight: bold;">Niji Japanese Restaurant</p>
+			<hr />
+			<p style="font-size: 1.1em;">
+				1095 Ellesmere Rd. <br/>
+				Toronto, ON <br/> 
+				M1P 2X2 <br/>
+				<b>Phone: </b> 416)755-3335
+			</p>
+			<hr />
+			<hr />
+			<p style="font-size:1.3em; font-weight: bold;">
+				Opening Hours
+			</p>
+			<p style="font-size:1.1em;">
+				<b>Mon - Thurs: </b>11:30 am - 10:00 pm <br/>
+				<b>Fri - Sat: </b>11:30 am - 11:00 pm <br />
+				<b>Sun: </b> Closed 
+			</p>
+		</div>
+		<div class="col-sm-8">
+			<iframe id="myGoogleMap"
+			frameborder="0" style="border:0"
+			src="https://www.google.com/maps/embed/v1/place
+			?key=AIzaSyBqmOk_D5BZk0ZWlJxxyt3XZJ3p_jAKOEY
+			&q=Ni+Ji+Sushi+Japanese+Restaurant
+			&center=43.767525, -79.271484
+			&zoom=15" 
+			allowfullscreen>
+			</iframe>
+		</div>
+	</div>
+	<hr />
+	<div>
+	</div>
+</div>
+{% endblock %}
