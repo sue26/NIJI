@@ -9,6 +9,8 @@ from jinja2 import evalcontextfilter, Markup, escape
 app = Flask(__name__)
 app.debug = True
 
+app.config['PERMANENT_SESSION_LIFETIME'] = 10800 #Timeout after 3 hours 
+
 mysql = MySQL()
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = 'tnWJD123~!'
@@ -118,7 +120,7 @@ def menu():
 @app.route('/contactUs/')
 def contactUs():
     return render_template('contactUs.html')
-    
+
 @app.route('/admin/', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
@@ -149,7 +151,7 @@ def login():
 
         return render_template('admin.html')
     
-    if session['logged_in']:
+    if 'logged_in' in session:
         return redirect(url_for('dashboard')) 
 
     return render_template('admin.html')
