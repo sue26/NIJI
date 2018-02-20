@@ -1,0 +1,92 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div class="myMenu container" style="background-color: white;">
+	<div class="myTabContent">
+		<div class="row">
+			<h1>VEGETARIAN MENU</h1>
+		</div>
+		<div class="row">
+			<div class="col-sm-8">
+	  			<table>
+	  				{% for item in veg %}
+						{% include 'includes/_menuTable.html' %}
+					{% endfor %}
+	  			</table>
+
+	  			<p style="color:green;">Below items can be made vegetarian. Please let us know while making an order.</p>
+	  			<table>
+	  				{% for item in veg2 %}
+	  					{% include 'includes/_menuTable.html' %}
+	  				{% endfor %}
+				</table>
+
+	  			<hr />
+
+	  			<table>
+					<tr>
+						<th></th>
+						<th></th>
+						<th></th>
+						<th class="text-right">Maki<br/>6pcs</th>
+						<th class="text-right">Hand Roll<br/>1pc</th>
+					</tr>
+						
+					{% for item in vegMaki %}
+					<tr>
+						<td>{{item.num}}</td>
+						<td style="font-size:1.2em; font-weight: bold;">{{item.name}}</td>
+						<td>{{item.description}}</td>
+						<td class="text-right">{{item.price1}}</td>
+						<td class="text-right">{{item.price2}}</td>
+					</tr>
+					{% endfor %}
+				</table>
+
+				<hr />
+
+				<table>
+					<tr>
+						<th></th>
+						<th></th>
+						<th class="text-right">Sushi<br/>2pcs</th>
+						<th class="text-right">Sashimi<br/>3pcs</th>
+					</tr>
+						
+					{% for item in vegAlacarte %}
+					<tr>
+						<td style="font-size:1.2em; font-weight: bold;">{{item.name}}</td>
+						<td>{{item.description}}</td>
+						<td class="text-right">{{item.price1}}</td>
+						<td class="text-right">{{item.price2}}</td>
+					</tr>
+					{% endfor %}
+				</table>
+
+				
+				<hr />
+				<hr />
+				<h3>Lunch</h3>
+				<table>
+					{% for item in vegLunch %}
+						{% include 'includes/_menuTable.html' %}
+					{% endfor %}
+				</table>
+				<hr />
+				<p style="color:green;">Below items can be made vegetarian. Please let us know while making an order.</p>
+				<table>
+					{% for item in veg2Lunch %}
+						{% include 'includes/_menuTable.html' %}
+					{% endfor %}
+				</table>
+			</div>
+
+			<div class="col-sm-4">
+				<img src="{{url_for('static', filename='menu/maki1.jpg')}}" alt="maki1">
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

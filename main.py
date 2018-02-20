@@ -117,6 +117,26 @@ def menu():
         maki=maki, vegMaki=vegmaki, alacarte=alacarte, sashimi=sashimi,
         maindish=maindish, sushidinner=sushidinner, love=love, bento=bento)
 
+@app.route('/vegmenu/')
+def vegmenu():
+    cur = mysql.connection.cursor()
+    cur.execute('select * from menu where vege="1" and not (type="lunch" or type="maki" or type="vegmaki" or type="alacarte")')
+    veg = cur.fetchall()
+    cur.execute('select * from menu where vege="2" and not (type="lunch" or type="maki" or type="vegmaki" or type="alacarte")')
+    veg2 = cur.fetchall()
+    cur.execute('select * from menu where vege="1" and type="lunch"')
+    vegLunch = cur.fetchall()
+    cur.execute('select * from menu where vege="1" and type="alacarte"')
+    vegAlacarte = cur.fetchall()
+    cur.execute('select * from menu where not vege="0" and (type="maki" or type="vegmaki")')
+    vegMaki = cur.fetchall()
+    cur.execute('select * from menu where vege="2" and type="lunch"')
+    veg2Lunch = cur.fetchall()
+    cur.close()
+
+    return render_template('vegmenu.html', veg=veg, veg2=veg2, vegLunch=vegLunch, veg2Lunch=veg2Lunch, 
+        vegAlacarte=vegAlacarte, vegMaki=vegMaki)
+
 @app.route('/contactUs/')
 def contactUs():
     return render_template('contactUs.html')

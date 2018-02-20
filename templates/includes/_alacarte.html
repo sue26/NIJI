@@ -1,47 +1,46 @@
 <div id="alac" class="tab-pane fade">
 	<div class="row">
+		<img src="{{url_for('static', filename='menu/sushiNsashimi.jpeg')}}" alt="sushi1" style="width:100%; height: auto;">
+	</div>
+	<div class="row">
 		<h1>&Agrave; LA CARTE</h1>
 	</div>
 	<div class="row">
-		<div class="col-sm-8">
-			<table>
-			<tr>
-				<th></th>
-				<th></th>
-				<th class="text-right">Sushi<br/>2pcs</th>
-				<th class="text-right">Sashimi<br/>3pcs</th>
-			</tr>
-				
-			{% for item in alacarte %}
-			<tr>
-				<td style="font-size:1.2em; font-weight: bold;">{{item.name}}</td>
-				<td>{{item.description}}</td>
-				<td class="text-right">{{item.price1}}</td>
-				<td class="text-right">{{item.price2}}</td>
-			</tr>
-			{% endfor %}
-			</table>
+		<table>
+		<tr>
+			<th></th>
+			<th></th>
+			<th class="text-right">Sushi<br/>2pcs</th>
+			<th class="text-right">Sashimi<br/>3pcs</th>
+		</tr>
+			
+		{% for item in alacarte %}
+		<tr>
+			<td style="font-size:1.2em; font-weight: bold;">{{item.name}}</td>
+			<td>{{item.description}}</td>
+			<td class="text-right">{{item.price1}}</td>
+			<td class="text-right">{{item.price2}}</td>
+		</tr>
+		{% endfor %}
+		</table>
 
-			<hr />
-			<hr />
-			<hr />
+		<hr />
+		<hr />
+		<hr />
+	</div>
 
-			<div class="row">
-				<h1>Ni-Ji Sashimi</h1>
-			</div>
-			<table>
-			{% for item in sashimi %}
-			<tr>
-				<td style="font-size:1.2em; font-weight: bold;">{{item.name}}</td>
-				<td>{{item.description}}</td>
-				<td class="text-right">{{item.price}}</td>
-			</tr>
-			{% endfor %}			
-			</table>
-
-		</div>
-		<div class="col-sm-4">
-			<img src="{{url_for('static', filename='menu/maki1.jpg')}}" alt="maki1">
-		</div>
+	<div class="row">
+		<h1>Ni-Ji Sashimi</h1>
+	</div>
+	<div class="row">
+		<table>
+		{% for item in sashimi %}
+		<tr>
+			<td style="font-size:1.2em; font-weight: bold;">{{item.name}}</td>
+			<td>{{item.description}}</td>
+			<td class="text-right">{{item.price}}</td>
+		</tr>
+		{% endfor %}			
+		</table>
 	</div>
 </div>

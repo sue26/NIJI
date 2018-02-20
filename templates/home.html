@@ -100,7 +100,7 @@
 <div class="myAbout container">
   <h1>Welcome!</h1>
   <!-- <p>Providing quality, authentic and healthy food over 10 years, we have been selected by many for being the best sushi restaurant in Scarborough. Well-known for our quick service and freshly made food, our customers leave with satisfactory. Our customers dine in intimate and friendly atmosphere</p> -->
-  <p>Niji Japanese Restaurant is located at the intersection of Midland and Ellesmere. Serving our loyal customers for more than 15 years, Niji Japanese Restaurant has become a favourite dining place for families, friends, couples and co-workers. We offer authentic Japanese and Korean dishes made from fresh ingredients. </p>
+  <p>Niji Japanese Restaurant is located at the intersection of Midland and Ellesmere. Serving our loyal customers for more than 15 years, Niji Japanese Restaurant has become a favourite dining place for families and colleagues. We offer authentic Japanese and Korean dishes made from fresh ingredients. </p>
 </div>
 
 <div id="aboutPhoto">
@@ -110,20 +110,29 @@
     <img src="{{url_for('static', filename='about/a4.jpg')}}">
     <img src="{{url_for('static', filename='about/a5.jpg')}}">
     <img src="{{url_for('static', filename='about/a6.jpg')}}">
-  </div>
+</div>
+
+<div id="myNotice">
+  {% if notice %}
+    <h1>Notice</h1>
+    {% for item in notice %}
+      <p>{{item.content}}</p>
+    {% endfor %}
+  {% endif %}
+</div>
 
 <div class="mySeeMenu">
   <div class="row seeMenuDescription">
-    <p><b>Place an order: </b>(416)755-3335</p>
+    <p><b>Place an order: <br /></b>(416)755-3335</p>
   </div>
   <div class="row">
-    <div class="col-sm-6">
-      <a href="/menu"><button class="seeMenuButton">
+    <div class="col-xs-6">
+      <a href="/menu" class="seeMenuButton" id="menuButton">
         <img src="{{url_for('static', filename='foodicon.png')}}"><br />See Menu</button>
       </a>
     </div>
-    <div class="col-sm-6">
-      <a><button class="seeMenuButton">
+    <div class="col-xs-6">
+      <a href="/vegmenu" class="seeMenuButton" id="vegButton">
         <img src="{{url_for('static', filename='vegicon.png')}}"><br />See Vegetarian Option</button>
       </a>
     </div>

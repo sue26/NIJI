@@ -102,32 +102,63 @@ pre {
 	width: auto;
 }
 
+#myNotice {
+	margin-left: 5vw;
+}
+
 .mySeeMenu {
 	width: 100%;
 	background-image: url('../static/background_seemenu.jpg');
 	opacity:0.9;
-	height: 30vw;
+	height: 60vh;
 	margin-top:30px;
 	font-family: 'Glegoo', serif;
 }
 
 .seeMenuButton {
+	display: block;
 	border: 1px solid white;
 	border-radius: 5px;
 	padding:10px;
 	opacity: 1;
-	background-color: rgba(200,200,200, 0.5);
 	color: white;
 	font-size: 1.2em;
 	text-decoration: none;
+	width: 120px;
+	text-align: center;
+	text-decoration: none !important;
 }
 
 .seeMenuButton:hover {
-	background-color: rgba(0,0,0,0.5);
+	color: white;
+}
+
+.seeMenuButton:active {
+	color: white;
+}
+
+#menuButton {
+	background-color: rgba(230, 115, 0, 0.7);
+	float: right;
+	margin-right: 20px;
+}
+
+#menuButton:hover {
+	background-color: rgba(153, 77, 0, 0.7);
+}
+
+#vegButton {
+	background-color: rgba(0, 51, 0, 0.7);
+	float: left;
+	margin-left: 20px;
+}
+
+#vegButton:hover {
+	background-color: rgba(0, 26, 0, 0.7);
 }
 
 .seeMenuButton img {
-	width: 100px;
+	width: 80px;
 	height: auto;
 }
 
@@ -135,7 +166,7 @@ pre {
 	color: white;
 	text-align: center;
 	font-size: 2em;
-	padding: 80px;
+	padding: 80px 80px 0px 80px;
 }
 
 .myOpeningHours {
@@ -299,7 +330,7 @@ pre {
 	margin: 2vw;
 }
 
-.myTabContent h1 {
+.myTabContent h1, .myTabContent h3 {
 	font-size: 3em;
 	font-family: 'Glegoo', serif;
 }
