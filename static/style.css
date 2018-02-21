@@ -82,6 +82,27 @@ pre {
 	font-size: 100%;
 }
 
+.myLinks div div {
+	padding: 20px;
+	text-align: center;
+}
+
+.myLinks a {
+	display: block;
+	width: 100%;
+	border-radius: 5px;
+	padding: 10px;
+	margin: 10px;
+	background-color: #e5808c;
+	border: 1px solid #e5808c;
+}
+
+.myLinks a:hover {
+	text-decoration: none;
+	background-color: #e8374c;
+	color: white;
+}
+
 .myAbout {
 	padding: 20px;
 	margin: 50px 10vw 50px 10vw;

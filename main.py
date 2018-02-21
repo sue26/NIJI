@@ -86,10 +86,10 @@ def menu():
     result = cur.execute('select * from menu where type="soupNsalad"')
     soupNsalad = cur.fetchall()
 
-    result = cur.execute('select * from menu where type="maki"')
+    result = cur.execute('select * from menu where type="maki" order by num')
     maki = cur.fetchall()
 
-    result = cur.execute('select * from menu where type="vegmaki"')
+    result = cur.execute('select * from menu where type="vegmaki" order by num')
     vegmaki = cur.fetchall()
 
     result = cur.execute('select * from menu where type="alacarte"')
@@ -98,10 +98,10 @@ def menu():
     result = cur.execute('select * from menu where type="sashimi"')
     sashimi = cur.fetchall()
 
-    result = cur.execute('select * from menu where type="maindish"')
+    result = cur.execute('select * from menu where type="maindish" order by num')
     maindish = cur.fetchall()
 
-    result = cur.execute('select * from menu where type="sushidinner"')
+    result = cur.execute('select * from menu where type="sushidinner" order by num')
     sushidinner = cur.fetchall()
 
     result = cur.execute('select * from menu where type="love"')

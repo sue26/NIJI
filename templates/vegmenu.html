@@ -15,7 +15,7 @@
 					{% endfor %}
 	  			</table>
 
-	  			<p style="color:green;">Below items can be made vegetarian. Please let us know while making an order.</p>
+	  			<p style="color:green;">Below items can be made vegetarian. Please let us know when you place an order.</p>
 	  			<table>
 	  				{% for item in veg2 %}
 	  					{% include 'includes/_menuTable.html' %}
@@ -74,7 +74,7 @@
 					{% endfor %}
 				</table>
 				<hr />
-				<p style="color:green;">Below items can be made vegetarian. Please let us know while making an order.</p>
+				<p style="color:green;">Below items can be made vegetarian. Please let us know when you place an order.</p>
 				<table>
 					{% for item in veg2Lunch %}
 						{% include 'includes/_menuTable.html' %}
@@ -83,7 +83,16 @@
 			</div>
 
 			<div class="col-sm-4">
-				<img src="{{url_for('static', filename='menu/maki1.jpg')}}" alt="maki1">
+				<img src="{{url_for('static', filename='menu/appe2.jpeg')}}" alt="edamame">
+				<img src="{{url_for('static', filename='menu/appe4.jpeg')}}" alt="sushipizza">
+				<img src="{{url_for('static', filename='menu/appe5.jpeg')}}" alt="japchae">
+				<img src="{{url_for('static', filename='menu/soupNsalad1.jpeg')}}" alt="salad">
+				<img src="{{url_for('static', filename='menu/soupNsalad3.jpeg')}}" alt="salad">
+				<img src="{{url_for('static', filename='menu/main6.jpeg')}}" alt="vegtemp">
+				<img src="{{url_for('static', filename='menu/bento7.jpg')}}" alt="bento7">
+				<img src="{{url_for('static', filename='menu/main8.jpeg')}}" alt="bibimbap">
+				<img src="{{url_for('static', filename='menu/vegmaki1.jpeg')}}" alt="veg1">
+				<img src="{{url_for('static', filename='menu/vegmaki2.jpeg')}}" alt="veg2">
 			</div>
 		</div>
 	</div>
