@@ -7,15 +7,15 @@ from jinja2 import evalcontextfilter, Markup, escape
 # from sassutils.wsgi import SassMiddleware
 
 app = Flask(__name__)
-app.debug = True
+app.secret_key = "secret"
 
-app.config['PERMANENT_SESSION_LIFETIME'] = 10800 #Timeout after 3 hours 
+app.config['PERMANENT_SESSION_LIFETIME'] = 10800 #Timeout after 3 hours
 
 mysql = MySQL()
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'tnWJD123~!'
-app.config['MYSQL_DB'] = 'niji'
-app.config['MYSQL_HOST'] = 'localhost'
+app.config['MYSQL_USER'] = 'nijisushi'
+app.config['MYSQL_PASSWORD'] = 'tnwjddlek'
+app.config['MYSQL_DB'] = 'nijisushi$niji'
+app.config['MYSQL_HOST'] = 'nijisushi.mysql.pythonanywhere-services.com'
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor' #from tuple to dictionary
 mysql.init_app(app)
 
@@ -57,7 +57,7 @@ class OptionForm(Form):
     description = TextAreaField('Description', [validators.Length(max=255)])
     price = StringField('Price', [validators.required()])
     m_id = StringField('m_id', [validators.required()])
-        
+
 @app.route('/')
 def home():
     return render_template('home.html')
@@ -112,8 +112,8 @@ def menu():
 
     cur.close()
 
-    return render_template('menu.html', optionsArray=optionsArray,options=options, 
-        appetizers=appetizers, lunch=lunch, tray=tray, soupNsalad=soupNsalad, 
+    return render_template('menu.html', optionsArray=optionsArray,options=options,
+        appetizers=appetizers, lunch=lunch, tray=tray, soupNsalad=soupNsalad,
         maki=maki, vegMaki=vegmaki, alacarte=alacarte, sashimi=sashimi,
         maindish=maindish, sushidinner=sushidinner, love=love, bento=bento)
 
@@ -134,7 +134,7 @@ def vegmenu():
     veg2Lunch = cur.fetchall()
     cur.close()
 
-    return render_template('vegmenu.html', veg=veg, veg2=veg2, vegLunch=vegLunch, veg2Lunch=veg2Lunch, 
+    return render_template('vegmenu.html', veg=veg, veg2=veg2, vegLunch=vegLunch, veg2Lunch=veg2Lunch,
         vegAlacarte=vegAlacarte, vegMaki=vegMaki)
 
 @app.route('/contactUs/')
@@ -170,9 +170,9 @@ def login():
             return render_template('admin.html')
 
         return render_template('admin.html')
-    
+
     if 'logged_in' in session:
-        return redirect(url_for('dashboard')) 
+        return redirect(url_for('dashboard'))
 
     return render_template('admin.html')
 
@@ -196,7 +196,7 @@ def dashboard():
 
 @app.route('/edit_menu/<string:id>/', methods=['GET', 'POST'])
 @is_logged_in
-def edit_menu(id): 
+def edit_menu(id):
     cur = mysql.connection.cursor()
     result = cur.execute('select * from menu where id = %s', [id])
     item = cur.fetchone()
@@ -261,7 +261,7 @@ def add_menu():
 
 
         cur = mysql.connection.cursor()
-        cur.execute('insert into menu (num, name, description, price, price1, price2, type) values (%s,%s,%s,%s,%s,%s,%s)', 
+        cur.execute('insert into menu (num, name, description, price, price1, price2, type) values (%s,%s,%s,%s,%s,%s,%s)',
             (num, name, description, price, price1, price2, type))
         mysql.connection.commit()
 

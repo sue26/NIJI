@@ -23,9 +23,9 @@
     <div class="item active nijiCarousel">
       <img src="{{url_for('static', filename='carousel/wallpaper.jpg')}}" alt="niji" style="opacity:1;">
       <div class="mycarousel-caption">
-        <img src="{{url_for('static', filename='carousel/niji_jap.png')}}" 
+        <img src="{{url_for('static', filename='carousel/niji_jap.png')}}"
           style="height: 12vw; width: auto; margin-left: 37vw; background-color: transparent;">
-        <img src="{{url_for('static', filename='carousel/niji_txt.png')}}" 
+        <img src="{{url_for('static', filename='carousel/niji_txt.png')}}"
           style="width:40vw; height: 10vw; margin-left: 27vw; margin-bottom: 8vw; background-color: transparent;">
       </div>
     </div>
@@ -126,69 +126,81 @@
     <img src="{{url_for('static', filename='about/a6.jpg')}}">
 </div>
 
-<div id="myNotice">
-  {% if notice %}
-    <h1>Notice</h1>
-    {% for item in notice %}
-      <p>{{item.content}}</p>
-    {% endfor %}
-  {% endif %}
-</div>
-
-<div class="mySeeMenu">
-  <div class="row seeMenuDescription">
+<div class="myNotice">
+  <div class="row seeNoticeDescription">
     <p><b>Place an order: <br /></b>(416)755-3335</p>
   </div>
-  <div class="row">
-    <div class="col-xs-6">
-      <a href="/menu" class="seeMenuButton" id="menuButton">
-        <img src="{{url_for('static', filename='foodicon.png')}}"><br />See Menu</button>
-      </a>
-    </div>
-    <div class="col-xs-6">
-      <a href="/vegmenu" class="seeMenuButton" id="vegButton">
-        <img src="{{url_for('static', filename='vegicon.png')}}"><br />See Vegetarian Option</button>
-      </a>
-    </div>
+  <div id="myNotice">
+    {% if notice %}
+      <h1>Notice</h1>
+      {% for item in notice %}
+        <p>{{item.content}}</p>
+      {% endfor %}
+    {% endif %}
   </div>
 </div>
 
 <div class="myMap row">
+<!--
+    <div id="holiday" style="
+    padding: 5vw;
+    background-image: url('../static/holiday.png');
+    background-size: 100% 100%;
+    height: 40vh;
+    color: red;
+    margin-bottom: 20px;
+    ">
+        <div class="col-sm-4">
+          <h2 style="font-size: 2em;"><b>HOLIDAY HOURS: </b></h2>
+        </div>
+        <div class="col-sm-4">
+          <h6><b>December 24th & December 31st (Mon)</b></h6>
+          <p>11:30am - 10:00pm</p>
+        </div>
+        <div class="col-sm-4">
+          <h6><b>December 25th & January 1st (Tues)</b></h6>
+          <p>Closed</p>
+        </div>
+    </div>
+-->
   <div class="col-sm-3">
     <h1 style="font-size: 2em; margin-bottom: 30px;"><b>Opening Hours</b></h1>
     <hr />
-    <p><b>Mon - Thurs</b></p>
+    <h6><b>Sun - Mon</b></h6>
+    <p>Closed</p>
+    <hr />
+    <p><b>Tues - Thurs</b></p>
     <p>11:30am - 10:00pm</p>
     <hr />
     <h6><b>Fri - Sat</b></h6>
     <p>11:30am - 11:00pm</p>
     <hr />
-    <h6><b>Sun</b></h6>
-    <p>Closed</p>
+    <!--<h6 style="color: red;"><b>** We will be closed Monday, August 6th for Civic Holiday **</b></h6>-->
+  </div>
+  <div class="col-sm-3">
+    <hr />
+    <h1 style="font-size: 2em; margin-bottom: 30px;"><b>Location</b></h1>
+    <pre>1095 Ellesmere Rd
+Toronto, ON, M1P 2X2</pre>
+    <p style="font-size: 1em;">South West Corner of Midland and Ellesmere</p>
+
+    <hr />
+    <p>By Transit: </p>
+    <p style="font-size:1em;">1 min walk away from <br /><i>Midland Station</i> and <i>Ellesmere Station</i></p>
     <hr />
   </div>
-	<div class="col-sm-3"> 
-    <hr />
-		<h1 style="font-size: 2em; margin-bottom: 30px;"><b>Location</b></h1>
-		<pre>1095 Ellesmere Rd
-		Toronto, ON, M1P 2X2</pre>
-		<p style="font-size: 1em;">South West Corner of Midland and Ellesmere</p>
+  <div class="col-sm-6">
+    <iframe id="myGoogleMap"
+      frameborder="0" style="border:0"
+      src="https://www.google.com/maps/embed/v1/place
+      ?key=AIzaSyBqmOk_D5BZk0ZWlJxxyt3XZJ3p_jAKOEY
+      &q=Ni+Ji+Sushi+Japanese+Restaurant
+      &center=43.767525, -79.271484
+      &zoom=15"
+      allowfullscreen>
+    </iframe>
+  </div>
 
-		<hr />
-		<p>By Transit: </p>
-		<p style="font-size:1em;">1 min walk away from <br /><i>Midland Station</i> and <i>Ellesmere Station</i></p>
-    <hr />
-	</div>
-	<div class="col-sm-6">
-		<iframe id="myGoogleMap"
-			frameborder="0" style="border:0"
-			src="https://www.google.com/maps/embed/v1/place
-			?key=AIzaSyBqmOk_D5BZk0ZWlJxxyt3XZJ3p_jAKOEY
-			&q=Ni+Ji+Sushi+Japanese+Restaurant
-			&center=43.767525, -79.271484
-			&zoom=15" 
-			allowfullscreen>
-		</iframe>
-	</div>
+
 </div>
 {% endblock %}
